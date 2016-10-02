@@ -15,7 +15,7 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 710px}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -84,7 +84,13 @@
       padding: 3px;	
 	   width: 100%;
    }
-   
+   .side-nav-color{
+    background: rgba(0, 0, 0, 0.1) url("./images/hibernate-icone.png") no-repeat scroll 0 16px;
+    border: 0 outset #adadad;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+   }
   </style>
 </head>
 <body>
@@ -138,31 +144,49 @@
 		  <a href="#" class="list-group-item disabled">
 			Hibernate Tutorials
 		  </a>
-		  <a href="#" class="list-group-item">Hibernate Introduction</a>
-		  <a href="#" class="list-group-item">Hibernate - Architecture</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate Introduction</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Architecture</a>
 		  
-		  <a href="#" class="list-group-item">Hibernate - Quick Start </a>
-		  <a href="#" class="list-group-item">Hibernate - Configuration</a>
-		  <a href="#" class="list-group-item">Hibernate - Mappings</a>
-		  <a href="#" class="list-group-item">Hibernate - Transaction Management</a>
-		  <a href="#" class="list-group-item">Hibernate - Query Language </a>
-		  <a href="#" class="list-group-item">Hibernate - Criteria Queries </a>
-		  <a href="#" class="list-group-item">Hibernate - Caching</a>
-		  <a href="#" class="list-group-item">Hibernate - Batch Processing</a>
-		  <a href="#" class="list-group-item">Hibernate - Native SQL</a>
-		  <a href="#" class="list-group-item">Hibernate - Integration</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Quick Start </a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Configuration</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Mappings</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Transaction Management</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Query Language </a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Criteria Queries </a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Caching</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Batch Processing</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Native SQL</a>
+		  <a href="#" class="list-group-item side-nav-color">Hibernate - Integration</a>
 		</div>
     </div>
     <div class="col-sm-8 text-left">
-      <h1></h1>
+      <h1>Hibernate Introduction</h1>
       <p></p>
       <hr>
 		
-	  <div class="row">
-		  
-		  
-	 </div>
-		
+		 <p> This tutorial is designed for Java programmers with a need to understand the Hibernate framework and API.
+		  This hibernate tutorial provides in-depth concepts of Hibernate Framework with simplified examples. </p>
+		  <h3>ORM Introduction</h3>
+		  <p>In a nutshell, object/relational mapping is the automated (and transparent) persistence of objects in a Java application to the tables in a relational database, using metadata that describes the mapping between the objects and the database</p>
+		 <p> An ORM solution consists of the following four pieces</p>
+			<ul><li>An API for performing basic CRUD operations on objects of persistent classes</li>
+				<li>A language or API for specifying queries that refer to classes and properties of classes</li>
+                <li>A facility for specifying mapping metadata</li>
+                <li>A technique for the ORM implementation to interact with transactional objects to perform dirty checking, lazy association fetching, and other optimization functions.</li></ul>
+		  <p>There are many types of ORM solutions like hibernate, iBatis, JPA, Toplink.</p>
+	  <hr>
+	     <h3> Problem With JDBC (Motivation of ORM)</h3>
+			<ul> 
+				<li>Different database vendor use different SQL statements (DDL, DML etc.). A Java programmer needs to work with database vendor specific SQL statements. </li>
+				<li>Unit of data transfer is one property per entity. JAVA programmer has to work on individual columns of each row. A JAVA programmer has to fetch the database entity and initialize an object programmatically. JAVA programmer do not have a feeling of pure OOAD.</li>
+				<li>Persisting object graph to relational model is a overhead</li>
+				<li>Querying object graph is cumbersome</li>
+				<li>Large number of classes  </li>
+				<li>Repetitive and complicated codes</li>
+				<li>As a object-oriented programmer, you would not like to take overhead of SQL</li>
+				<li>No caching technique, no lazy fetching</li>
+			</ul>
+
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
