@@ -15,7 +15,7 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 1050px}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -82,9 +82,22 @@
    .learn-more{
    
       padding: 3px;	
-	   width: 100%;
+	  width: 100%;
    }
-   
+   .side-nav-color{
+		background: rgba(0, 0, 0, 0.1) url("./images/java-icon.png") no-repeat scroll 0 13px;
+		border: 0 outset #adadad;
+		color: #000;
+		text-align: left;
+		text-decoration: none;
+   }
+   .side-nav-desable{
+    font-family: cursive;
+    font-size: 20px;
+   }
+   .image-border-type{
+		border: 2px solid;
+   }
   </style>
 </head>
 <body>
@@ -135,25 +148,46 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
 		<div class="list-group">
-		  <a href="#" class="list-group-item disabled">
-			AEM CQ5 Tutorials
+		  <a href="#" class="list-group-item disabled side-nav-desable">
+			JAVA Tutorials
 		  </a>
-		  <a href="#" class="list-group-item">History of Communiqué</a>
-		  <a href="#" class="list-group-item">What’s in the box… </a>
-		  <a href="#" class="list-group-item">CQ5 Building Blocks</a>
-		  <a href="#" class="list-group-item">What’s new in AEM 6.1</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Overview</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Class Loaders</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - String </a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Exception Handling</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Regex</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Collection</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Generics </a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Multithreading</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - I/O</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Serialization</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Date and Time</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Date and Time</a>
+		  <a href="#" class="list-group-item side-nav-color">JAVA - Sending Email</a>
+		
+		 
 		</div>
     </div>
     <div class="col-sm-8 text-left">
-      <h1></h1>
+      <h1>JAVA - Overview</h1>
       <p></p>
       <hr>
-		
-	  <div class="row">
-		  
-		  
-	 </div>
-		
+		<p>Java is a programming language and a platform, was originally developed by Sun Microsystems which was initiated by James Gosling and released in 1995 as core component of Sun Microsystems' Java platform (Java 1.0 [J2SE]).</p>
+		<p>Java is a high level, robust, secured and object-oriented programming language.</p>
+		<hr>
+		<h3>Java Object Oriented Programming concepts</h3>
+		<hr>
+		<p>Writing object-oriented programs involves creating classes, creating objects from those classes, and creating applications, which are stand-alone executable programs that use those objects.</p>
+		<h4>Class:</h4>
+        <p>A class is a template, blueprint, or contract that defines what an object’s data fields and methods will be.</p>
+		<p>A Java class uses variables to define data fields and methods to define actions. Additionally, a class provides methods of a special type, known as constructors, which are invoked to create a new object. A constructor can perform any action, but constructors are designed to perform initializing actions, such as initializing the data fields of objects.</p>
+		<h4>Objects:</h4>
+        <p>An object is an instance of a class. You can create many instances of a class.</p>
+        <p>Objects are made up of attributes and methods. Attributes are the characteristics that define an object; the values contained in attributes differentiate objects of the same class from one another. 
+		</p>
+		<p>To understand this better let’s take example of Mobile as object. Mobile has characteristics like model, manufacturer, cost, operating system etc. So if we create “Samsung” mobile object and “IPhone” mobile object we can distinguish them from characteristics. The values of the attributes of an object are also referred to as the object’s state.</p>
+		 <center><img class="image-border-type" src="./images/java-opps.png" alt="java opps"></img></center>
+
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
