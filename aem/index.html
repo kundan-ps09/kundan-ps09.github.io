@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Web development tutorials</title>
+  <title>AEM Tutorials</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
     }
     
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 1650px}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -85,11 +85,15 @@
 	   width: 100%;
    }
    .side-nav-color{
-    background: rgba(0, 0, 0, 0.1) url("./images/hibernate-icone.png") no-repeat scroll 0 16px;
+    background: rgba(0, 0, 0, 0.1) url("./images/aem-icon.png") no-repeat scroll 0 14px;
     border: 0 outset #adadad;
     color: #000;
     text-align: left;
     text-decoration: none;
+   }
+   .side-nav-desable{
+    font-family: cursive;
+    font-size: 20px;
    }
    
   </style>
@@ -142,24 +146,121 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
 		<div class="list-group">
-		  <a href="#" class="list-group-item disabled">
+		  <a href="#" class="list-group-item disabled side-nav-desable">
 			AEM CQ5 Tutorials
 		  </a>
-		  <a href="#" class="list-group-item side-nav-color">History of Communiqué</a>
+		  <a href="#history" class="list-group-item side-nav-color">History of Communiqué</a>
 		  <a href="#" class="list-group-item side-nav-color">What’s in the box… </a>
 		  <a href="#" class="list-group-item side-nav-color">CQ5 Building Blocks</a>
 		  <a href="#" class="list-group-item side-nav-color">What’s new in AEM 6.1</a>
 		</div>
     </div>
     <div class="col-sm-8 text-left">
-      <h1></h1>
-      <p></p>
+      <h1><a name="history">History of Communiqué</a></h1>
       <hr>
+		<p>This product was originaly started by a Swiss company Day Software in early 2000 with the name "Communique". CQ is the short form of "Communique".</p>
 		
-	  <div class="row">
+		<div class="jumbotron">
 		  
-		  
-	 </div>
+		  <h4>Comunique (CQ) 1.0</h4>
+		  <p>		<ul>
+						<li>Started by a Swiss company Day Software</li>
+						<li>CGI Scripts for Netscape Enterprise Server</li>
+					</ul>
+		 </p>
+		 <h4>Comunique (CQ) 2.0</h4>
+		  <p>		<ul>
+						<li>Standalone application (single binary)</li>
+						<li>C Programming Language</li>
+						<li>HTTP Server embedded</li>
+						<li>File system based page (content) storage</li>
+						
+					</ul>
+		 </p>
+		 <h4>Comunique (CQ) 3.0</h4>
+		  <p>		<ul>
+						<li>Communiqué 2 rewritten as a Web Application in Java</li>
+						<li>HTTP Server separated out (birth of CQSE)</li>
+						<li>Content Bus storage (connectors for various file formats, databases, etc)</li>
+						<li>File system based page (content) storage</li>
+						<li>Released in 2002</li>
+						
+					</ul>
+		 </p>
+		 
+		 <h4>Day Comunique (CQ) 4.0</h4>
+		  <p>		<ul>
+						<li>Content Bus storage over JCR (CRX 1.0)</li>
+						<li>Two Web Applications: CRX and CQ</li>
+						<li>Released in 2005</li>
+					</ul>
+		 </p>
+		 <h4>Day Comunique (CQ) 5.0</h4>
+		  <p>		<ul>
+						<li>Complete Rewrite of (almost) everything</li>
+						<li>Released in 2008</li>
+					</ul>
+		 </p>
+		 <h4>Day Comunique (CQ) 5.2</h4>
+		  <p>		<ul>
+						<li>Release with lot of bug fixes</li>
+						<li>Released in 2009</li>
+					</ul>
+		 </p>
+		 <h4>Day Comunique (CQ) 5.3</h4>
+		  <p>		<ul>
+						<li>Release with lot of bug fixes</li>
+						<li>Released in 2010</li>
+					</ul>
+		 </p>
+		 <h4>Adobe CQ 5.4</h4>
+		  <p>		<ul>
+						<li>Adobe Systems renamed Day CQ5 as Adobe CQ5 after acquiring Day Software in 2010</li>
+						<li>Released in 2011</li>
+					</ul>
+		 </p>
+		 <h4>Adobe CQ 5.5</h4>
+		  <p>		<ul>
+						<li>New architecture- OSGI based architecture</li>
+						<li>Released in 2012</li>
+					</ul>
+		 </p>
+		 <h4>Adobe Experience Manager (AEM) 5.6</h4>
+		  <p>		<ul>
+						<li>Adobe Release CQ5 with new Name</li>
+						<li>Introduction to Touch UI</li>
+						<li>Released in 2013</li>
+					</ul>
+		 </p>
+		  <h4>Adobe Experience Manager (AEM) 6.0</h4>
+		  <p>		<ul>
+						<li>Replaced CQSE with Jetty</li>
+						<li>New templating mark-up language- Sightly</li>
+						<li>Jackrabbit Oak (aka Jackrabbit 3)</li>
+						<li>Touch UI became functional</li>
+						<li>New implementiation for Social Component Framework (using handlebar JS templating Language )</li>
+						<li>Released in 2014</li>
+						
+					</ul>
+		 </p>
+		  <h4>Adobe Experience Manager (AEM) 6.1</h4>
+		  <p>		<ul>
+						<li>Improved Touch UI Authoring interface(usable)</li>
+						<li>Released in 2015</li>
+						
+						
+					</ul>
+		 </p>
+		 <h4>Adobe Experience Manager (AEM) 6.2</h4>
+		  <p>		<ul>
+						<li>Release with bug fixes 6.1</li>
+						<li>Released in 2016</li>
+						
+						
+					</ul>
+		 </p>
+
+		</div>
 		
     </div>
     <div class="col-sm-2 sidenav">
