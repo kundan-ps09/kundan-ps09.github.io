@@ -142,7 +142,8 @@
   </div><!-- /.container-fluid -->
 </nav>
   
-<div class="container-fluid text-center">
+
+  <div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
 		<div class="list-group">
@@ -158,110 +159,63 @@
     <div class="col-sm-8 text-left">
       <h1><a name="technonlogy-stack">Technology Stack of Adobe Experience Manager</a></h1>
       <hr>
-		<p>This product was originaly started by a Swiss company Day Software in early 2000 with the name "Communique". CQ is the short form of "Communique".</p>
-		
-		<div class="jumbotron">
-		  
-		  <h4>Comunique (CQ) 1.0</h4>
-		  <p>		<ul>
-						<li>Started by a Swiss company Day Software</li>
-						<li>CGI Scripts for Netscape Enterprise Server</li>
-					</ul>
-		 </p>
-		 <h4>Comunique (CQ) 2.0</h4>
-		  <p>		<ul>
-						<li>Standalone application (single binary)</li>
-						<li>C Programming Language</li>
-						<li>HTTP Server embedded</li>
-						<li>File system based page (content) storage</li>
-						
-					</ul>
-		 </p>
-		 <h4>Comunique (CQ) 3.0</h4>
-		  <p>		<ul>
-						<li>Communiqué 2 rewritten as a Web Application in Java</li>
-						<li>HTTP Server separated out (birth of CQSE)</li>
-						<li>Content Bus storage (connectors for various file formats, databases, etc)</li>
-						<li>File system based page (content) storage</li>
-						<li>Released in 2002</li>
-						
-					</ul>
-		 </p>
-		 
-		 <h4>Day Comunique (CQ) 4.0</h4>
-		  <p>		<ul>
-						<li>Content Bus storage over JCR (CRX 1.0)</li>
-						<li>Two Web Applications: CRX and CQ</li>
-						<li>Released in 2005</li>
-					</ul>
-		 </p>
-		 <h4>Day Comunique (CQ) 5.0</h4>
-		  <p>		<ul>
-						<li>Complete Rewrite of (almost) everything</li>
-						<li>Released in 2008</li>
-					</ul>
-		 </p>
-		 <h4>Day Comunique (CQ) 5.2</h4>
-		  <p>		<ul>
-						<li>Release with lot of bug fixes</li>
-						<li>Released in 2009</li>
-					</ul>
-		 </p>
-		 <h4>Day Comunique (CQ) 5.3</h4>
-		  <p>		<ul>
-						<li>Release with lot of bug fixes</li>
-						<li>Released in 2010</li>
-					</ul>
-		 </p>
-		 <h4>Adobe CQ 5.4</h4>
-		  <p>		<ul>
-						<li>Adobe Systems renamed Day CQ5 as Adobe CQ5 after acquiring Day Software in 2010</li>
-						<li>Released in 2011</li>
-					</ul>
-		 </p>
-		 <h4>Adobe CQ 5.5</h4>
-		  <p>		<ul>
-						<li>New architecture- OSGI based architecture</li>
-						<li>Released in 2012</li>
-					</ul>
-		 </p>
-		 <h4>Adobe Experience Manager (AEM) 5.6</h4>
-		  <p>		<ul>
-						<li>Adobe Release CQ5 with new Name</li>
-						<li>Introduction to Touch UI</li>
-						<li>Released in 2013</li>
-					</ul>
-		 </p>
-		  <h4>Adobe Experience Manager (AEM) 6.0</h4>
-		  <p>		<ul>
-						<li>Replaced CQSE with Jetty</li>
-						<li>New templating mark-up language- Sightly</li>
-						<li>Jackrabbit Oak (aka Jackrabbit 3)</li>
-						<li>Touch UI became functional</li>
-						<li>New implementiation for Social Component Framework (using handlebar JS templating Language )</li>
-						<li>Released in 2014</li>
-						
-					</ul>
-		 </p>
-		  <h4>Adobe Experience Manager (AEM) 6.1</h4>
-		  <p>		<ul>
-						<li>Improved Touch UI Authoring interface(usable)</li>
-						<li>Released in 2015</li>
-						
-						
-					</ul>
-		 </p>
-		 <h4>Adobe Experience Manager (AEM) 6.2</h4>
-		  <p>		<ul>
-						<li>Release with bug fixes 6.1</li>
-						<li>Released in 2016</li>
-						
-						
-					</ul>
-		 </p>
+		<p>This tutorial describe the technology stack on whch AEM is built. The stack can be divided as follows</p>
+		<h4>OSGi Framework:</h4> 
+		<p>The OSGi Framework is made up of three layers – Module, Lifecycle, and Services</p>
+		<p>The responsibilities of the layers are:</p>
+		<ul>
+			<li>
+				<p>
+					<strong>Module</strong> — Defines how a module, or a Bundle in OSGi-speak Basically, a bundle is just a plain old JAR file, 
+					whose manifest file has	some defined entries. These entries identify the bundle with a symbolic name, a version and more. In addition there are headers which define what a bundle provides – Export-Package – and what a bundle requires
+					to be operative – Import-Package and Require-Bundle.
+				</p>
+			</li>
+			<li>
+				<p><strong>Lifecycle</strong> — The lifecycle layer defines the states a bundle may be in and
+					describes the state changes. By providing a class, which implements the
+					BundleActivator interface and which is named in the Bundle-Activator
+					manifest header, a bundle may hook into the lifecycle process when the
+					bundle is started and stopped.
+				</p>
+			</li>
+			<li>
+				<p><strong>Services</strong> — For the application to be able to interact, the OSGi Core
+					Specification defines the service layer. This describes a registry for
+					services,which may be shared.
+				</p>
+			</li>
 
-		</div>
+		</ul>
 		
+
+		
+        
+		<h4>Jackrabbit Oak:</h4> 
+		<p>AEM 6.0 is now powered by the next generation repository implementation
+			called Jackrabbit.
+
+		</p>
+		<p>The architecture of Oak was redesigned from scratch to offer improved performance and scalability and support massive content repositories.
+		</p>
+
+		<h4>Java Content Repository (JCR):</h4>
+
+		<ul>
+			<li>A Java Content Repository is an object database that provides various services
+				for storing, accessing, and managing content.</li>
+			<li>In addition to a hierarchically structured storage, common services of a content repository
+				are versioning, access control, full text searching, and event monitoring.</li>
+			<li>The JCR provides a generic application data store for both structured and
+				unstructured content.
+			</li>
+			<li>File systems provide excellent storage for unstructured,hierarchical content.</li>
+            <li>
+            Databases provide excellent storage for structured data due to transactional services and referential integrity functionality.
+            </li>
+		</ul>
+		<h4>Jetty 8:</h4>
+		<p>An extensible, widely used open source web container supporting Servlets 3.0 specification, which has replaced the "own breed" CQSE used previously.</p>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
