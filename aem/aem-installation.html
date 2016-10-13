@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AEM Tutorials</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1250px}
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default header">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">TECHREVISITED</a>
+	   
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/java/">Java</a></li>
+		<li><a href="/junit/">Junit</a></li>
+        <li class="dropdown">
+          <a href="/spring/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Framework <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/spring/">Spring</a></li>
+            <li><a href="/hibernate/">Hibernate</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">misc</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">GO</button>
+      </form>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="/aem/">AEM 6.1</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  
+
+  <div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+		<div class="list-group">
+		  <a href="#" class="list-group-item disabled side-nav-desable">
+			AEM CQ5 Tutorials
+		  </a>
+		  <a href="/aem/#history" class="list-group-item side-nav-color">History of Communiqué</a>
+		  <a href="/aem/aem-architecture.html#technonlogy-stack" class="list-group-item side-nav-color">Technology Stack</a>
+		  <a href="/aem/aem-installation.html" class="list-group-item side-nav-color">AEM Installation</a>
+		  <a href="#" class="list-group-item side-nav-color">What’s new in AEM 6.1</a>
+		</div>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1><a name="technonlogy-stack">AEM Installation</a></h1>
+      <hr>
+		<p>This tutorial describe  how to install and start a AEM 6.0 Author and publisher instance.</p>
+     <div class="jumbotron">
+          <h4>How to install an Author instance:</h4>
+          <ul>
+            <li>Create a folder structure on your file system where you will store, install,
+                and start AEM6.0 (e.g. C://Adobe/AEM6.0/author</li>
+            <li>Copy the AEM 6.0 quickstart JAR and license.properties file into the
+                    newly created folder structure</li>
+           
+             <li>Rename the AEM quickstart JAR to aem6.0-author-p4502.jar <br/>
+                     - AEM6.0 = the application name <br>
+                     - author = the WCM mode it will run in (e.g. author or publish) <br>
+                     - 4502 = the port it will run in (e.g. any available port is acceptable)<br>
+                     - If no port number is provided in the file name, AEM6.0 will select the first available port from the following list: (4502,8080,8081,8082,8083,8084,8085,8888,9362)
+            </li>
+            <li>Double-click the aem6.0-author-p4502.jar <br/>
+                     - AEM will start as author on port 4502
+            </li>
+           
+          </ul>
+           <h4>How to install a publisher instance:</h4>
+          <ul>
+            <li>Create a folder structure on your file system where you will store, install,
+                and start AEM6.0 (e.g. C://Adobe/AEM6.0/publish</li>
+            <li>Copy the AEM 6.0 quickstart JAR and license.properties file into the
+                    newly created folder structure</li>
+           
+             <li>Rename the AEM quickstart JAR to aem6.0-publish-p4503.jar <br/>
+                     - AEM6.0 = the application name <br>
+                     - publish = the WCM mode it will run in (e.g. author or publish) <br>
+                     - 4502 = the port it will run in (e.g. any available port is acceptable)<br>
+                     - If no port number is provided in the file name, AEM6.0 will select the first available port from the following list: (4502,8080,8081,8082,8083,8084,8085,8888,9362)
+            </li>
+            <li>Double-click the aem6.0-publish-p4503.jar <br/>
+                     - AEM will start as author on port 4503
+            </li>
+           
+          </ul> 
+
+          <h4>Start AEM  from command line</h4>
+          <ul>
+            <li>Once AEM is installed using jar file and started. Stop using "stop" button</li>
+            <li>From command line go to /crx-quickstart/bin</li>
+            <li>Run command start.bat</li>
+          </ul>
+          <h4>Change default JVM param </h4>
+          <ul>
+            <li> Open to /crx-quickstart/bin/start.bat in any editor of your choice</li>
+            <li> Search for "set CQ_JVM_OPTS"</li>
+            <li> Change JVM option based on your need</li>
+          </ul>
+          <h4>Stop AEM</h4>
+           <ul>
+            <li>If started AEM  by double clicking jar file and just click on stop button in jar file</li>
+            <li>If started AEM from command line then run "stop" script from crx-quickstart/bin directory</li>
+          </ul>
+    </div>
+		
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p></p>
+      </div>
+      <div class="well">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>&copy;&nbsp;<script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-84972147-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+

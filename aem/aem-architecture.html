@@ -8,95 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 1250px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    
-     /* Set black background color, white text and some padding */
-    footer {
-      background-color:  #4b6695;
-      color: white;
-      padding: 15px;
-    }
-    /* Set black background color, */
-    .header {
-      background-color:  #4b6695;
-	 
-    }
-	.navbar-default .navbar-nav > li > a {
-      color: white;
-    }
-	.navbar-default .navbar-brand {
-     color: white;
-	 font-weight: bold;
-	  padding-right: 150px;
-    }
-	.btn-default {
-		background-color: #4b6696;
-		border-color: #ccc;
-		color: white;
-		font-family: fantasy;
-	}
-    
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .row.content {height:auto;}
-    }
-	.sidenav {
-		background-color: #f1f1f1;
-		height: 100%;
-		padding-left: 1px;
-		padding-right: 1px;
-		padding-top: 0;
-   }
-   
-   .thumbnail {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    display: block;
-    height: 145px;
-    line-height: 1.42857;
-    margin-bottom: 5px;
-	margin-top: 5px;
-    padding: 4px;
-    transition: border 0.2s ease-in-out 0s;
-   }
-   .learn-more{
-   
-      padding: 3px;	
-	   width: 100%;
-   }
-   .side-nav-color{
-    background: rgba(0, 0, 0, 0.1) url("./images/aem-icon.png") no-repeat scroll 0 14px;
-    border: 0 outset #adadad;
-    color: #000;
-    text-align: left;
-    text-decoration: none;
-   }
-   .side-nav-desable{
-    font-family: cursive;
-    font-size: 20px;
-   }
-   
   </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
@@ -151,8 +66,8 @@
 			AEM CQ5 Tutorials
 		  </a>
 		  <a href="/aem/#history" class="list-group-item side-nav-color">History of Communiqué</a>
-		  <a href="/aem/aem-architecture/aem-architecture.html#technonlogy-stack" class="list-group-item side-nav-color">Technology Stack</a>
-		  <a href="#" class="list-group-item side-nav-color">CQ5 Building Blocks</a>
+		  <a href="/aem/aem-architecture.html#technonlogy-stack" class="list-group-item side-nav-color">Technology Stack</a>
+		  <a href="/aem/aem-installation.html" class="list-group-item side-nav-color">AEM Installation</a>
 		  <a href="#" class="list-group-item side-nav-color">What’s new in AEM 6.1</a>
 		</div>
     </div>
@@ -160,6 +75,29 @@
       <h1><a name="technonlogy-stack">Technology Stack of Adobe Experience Manager</a></h1>
       <hr>
 		<p>This tutorial describe the technology stack on whch AEM is built. The stack can be divided as follows</p>
+     <div class="jumbotron">
+          <h4>Java Platform</h4>
+          <ul>
+            <li>Java Runtime Environment (JRE 1.6 minimum. JRE 1.7 recommended)</li>
+          </ul>
+          <h4>Granite Platform ()</h4>
+          <ul>
+            <li>OSGi Framework (encapsulates all subsequent elements)</li>
+            <li>CQSE Servlet Engine (optional external application server(Jetty))</li>
+            <li>CRX Content Repository</li>
+            <li>Sling Content Delivery</li>
+            <li>Runs on JRE</li>
+          </ul>
+          <h4>Abobe Experience Manager Module</h4>
+          <ul>
+            <li>Individual AEM modules (WCM, DAM, Workflow, etc.)</li>
+            <li> Runs on Granite platform, within OSGi framework</li>
+          </ul>
+          <h4>Customer Applications (run on AEM)</h4>
+           <ul>
+            <li>Customer specific applications (websites, etc. also run within OSGi framework)</li>
+          </ul>
+    </div>
 		<h4>OSGi Framework:</h4> 
 		<p>The OSGi Framework is made up of three layers – Module, Lifecycle, and Services</p>
 		<p>The responsibilities of the layers are:</p>

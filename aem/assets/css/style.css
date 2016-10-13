@@ -1,0 +1,85 @@
+ /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    
+     /* Set black background color, white text and some padding */
+    footer {
+      background-color:  #4b6695;
+      color: white;
+      padding: 15px;
+    }
+    /* Set black background color, */
+    .header {
+      background-color:  #4b6695;
+	 
+    }
+	.navbar-default .navbar-nav > li > a {
+      color: white;
+    }
+	.navbar-default .navbar-brand {
+     color: white;
+	 font-weight: bold;
+	  padding-right: 150px;
+    }
+	.btn-default {
+		background-color: #4b6696;
+		border-color: #ccc;
+		color: white;
+		font-family: fantasy;
+	}
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+	.sidenav {
+		background-color: #f1f1f1;
+		height: 100%;
+		padding-left: 1px;
+		padding-right: 1px;
+		padding-top: 0;
+   }
+   
+   .thumbnail {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    height: 145px;
+    line-height: 1.42857;
+    margin-bottom: 5px;
+	margin-top: 5px;
+    padding: 4px;
+    transition: border 0.2s ease-in-out 0s;
+   }
+   .learn-more{
+   
+      padding: 3px;	
+	   width: 100%;
+   }
+   .side-nav-color{
+    background: rgba(0, 0, 0, 0.1) url("./images/aem-icon.png") no-repeat scroll 0 14px;
+    border: 0 outset #adadad;
+    color: #000;
+    text-align: left;
+    text-decoration: none;
+   }
+   .side-nav-desable{
+    font-family: cursive;
+    font-size: 20px;
+   }
