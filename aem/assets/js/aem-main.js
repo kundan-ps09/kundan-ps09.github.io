@@ -4,5 +4,5 @@ $(document).ready(function(){
  $("#footer-nav").load("footer.html"); 
 // $("#display-date").append('&copy;'+ new Date().getFullYear());
  var currentYear=new Date().getFullYear();
- $("#display-date  ).text(currentYear);
+ $("#display-date").text(currentYear);
 });
