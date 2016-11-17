@@ -32,70 +32,55 @@
       <h1><a name="technonlogy-stack">Create an Application/Project</a></h1>
       <hr>
 		<p>This tutorial describe explain how create an application/project in AEM 6.0 using CRXDE Lite. This will provide an area for you to build AEM 6.0 elements (Templates, Components, etc.)</p>
-     <div class="jumbotron">
-          <h4>Adobe recommends that you create the following structure for your application/project:</h4>
-         
-            <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>Structure</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>/apps/&lt;application name&gt;</td>
-                    <td>The application container</td>                   
-                  </tr>
-                  <tr>
-                    <td>/apps/&lt;application name&gt;/components</td>
-                    <td>The Components container</td>
-                  </tr>
-                   <tr>
-                    <td>/apps/&lt;application name&gt;/components/page</td>
-                    <td>The Page Components container</td>                                    
-                  </tr>
-                   <tr>
-                    <td>/apps/&lt;application name&gt;/components/global</td>
-                    <td>A location for global component files</td>                                    
-                  </tr>
-                   <tr>
-                    <td>/apps/&lt;application name&gt;/templates</td>
-                    <td>The Templates container</td>                                   
-                  </tr>
-                   <tr>
-                    <td>/apps/&lt;application name&gt;/src</td>
-                     <td>The OSGi bundles container</td>              
-                   </tr>
-                   <tr>
-                    <td>/apps/&lt;application name&gt;/install</td>
-                     <td>The compiled OSGi bundles container</td>
-                    
-                  </tr>
-                 
-                </tbody>
-              </table>
+
+    <h4>Adobe recommends that you create the following structure for your application/project:</h4>
+   
+      <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Structure</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>/apps/&lt;application name&gt;</td>
+              <td>The application container</td>                   
+            </tr>
+            <tr>
+              <td>/apps/&lt;application name&gt;/components</td>
+              <td>The Components container</td>
+            </tr>
+             <tr>
+              <td>/apps/&lt;application name&gt;/components/page</td>
+              <td>The Page Components container</td>                                    
+            </tr>
+             <tr>
+              <td>/apps/&lt;application name&gt;/components/global</td>
+              <td>A location for global component files</td>                                    
+            </tr>
+             <tr>
+              <td>/apps/&lt;application name&gt;/templates</td>
+              <td>The Templates container</td>                                   
+            </tr>
+             <tr>
+              <td>/apps/&lt;application name&gt;/src</td>
+               <td>The OSGi bundles container</td>              
+             </tr>
+             <tr>
+              <td>/apps/&lt;application name&gt;/install</td>
+               <td>The compiled OSGi bundles container</td>
+              
+            </tr>
+           
+          </tbody>
+        </table>
 
 
 
-          <h4>Granite Platform ()</h4>
-          <ul>
-            <li>OSGi Framework (encapsulates all subsequent elements)</li>
-            <li>CQSE Servlet Engine (optional external application server(Jetty))</li>
-            <li>CRX Content Repository</li>
-            <li>Sling Content Delivery</li>
-            <li>Runs on JRE</li>
-          </ul>
-          <h4>Abobe Experience Manager Module</h4>
-          <ul>
-            <li>Individual AEM modules (WCM, DAM, Workflow, etc.)</li>
-            <li> Runs on Granite platform, within OSGi framework</li>
-          </ul>
-          <h4>Customer Applications (run on AEM)</h4>
-           <ul>
-            <li>Customer specific applications (websites, etc. also run within OSGi framework)</li>
-          </ul>
-    </div>
+    <h4>Granite Platform ()</h4>
+    
+   
 		<h4>OSGi Framework:</h4> 
 		<p>The OSGi Framework is made up of three layers – Module, Lifecycle, and Services</p>
 		<p>The responsibilities of the layers are:</p>
