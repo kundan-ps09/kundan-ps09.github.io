@@ -76,92 +76,10 @@
           </tbody>
         </table>
 
+    <hr>
 
-
-    <h4>Granite Platform ()</h4>
+    <h4>How to create a project using CRXDE Lite</h4>
     
-   
-		<h4>OSGi Framework:</h4> 
-		<p>The OSGi Framework is made up of three layers – Module, Lifecycle, and Services</p>
-		<p>The responsibilities of the layers are:</p>
-		<ul>
-			<li>
-				<p>
-					<strong>Module</strong> — Defines how a module, or a Bundle in OSGi-speak Basically, a bundle is just a plain old JAR file, 
-					whose manifest file has	some defined entries. These entries identify the bundle with a symbolic name, a version and more. In addition there are headers which define what a bundle provides – Export-Package – and what a bundle requires
-					to be operative – Import-Package and Require-Bundle.
-				</p>
-			</li>
-			<li>
-				<p><strong>Lifecycle</strong> — The lifecycle layer defines the states a bundle may be in and
-					describes the state changes. By providing a class, which implements the
-					BundleActivator interface and which is named in the Bundle-Activator
-					manifest header, a bundle may hook into the lifecycle process when the
-					bundle is started and stopped.
-				</p>
-			</li>
-			<li>
-				<p><strong>Services</strong> — For the application to be able to interact, the OSGi Core
-					Specification defines the service layer. This describes a registry for
-					services,which may be shared.
-				</p>
-			</li>
-
-		</ul>
-		
-
-		
-        
-		<h4>Jackrabbit Oak:</h4> 
-		<p>AEM 6.0 is now powered by the next generation repository implementation
-			called Jackrabbit.
-
-		</p>
-		<p>The architecture of Oak was redesigned from scratch to offer improved performance and scalability and support massive content repositories.
-		</p>
-
-		<h4>Java Content Repository (JCR):</h4>
-
-		<ul>
-			<li>A Java Content Repository is an object database that provides various services
-				for storing, accessing, and managing content.</li>
-			<li>In addition to a hierarchically structured storage, common services of a content repository
-				are versioning, access control, full text searching, and event monitoring.</li>
-			<li>The JCR provides a generic application data store for both structured and
-				unstructured content.
-			</li>
-			<li>File systems provide excellent storage for unstructured,hierarchical content.</li>
-            <li>
-            Databases provide excellent storage for structured data due to transactional services and referential integrity functionality.
-            </li>
-		</ul>
-		<h4>Jetty 8:</h4>
-		<p>An extensible, widely used open source web container supporting Servlets 3.0 specification, which has replaced the "own breed" CQSE used previously.</p>
-        <h4>Apache Solr:</h4>
-        <p>A scalable open source enterprise search platform, which can be configured as
-        	embedded server or integrated external instance, to replace and extend
-        	functionality of default search engine based on Lucene.
-        </p>
-        <h4>Apache Sling:</h4>
-        <ul>
-        	<li>Apache Sling is a web framework that uses a Java Content Repository, such as
-				Apache Jackrabbit or Adobe CRX to store and manage content.</li>
-        	<li> AEM is built using Sling, a Web application framework based on REST principles that provides easy development of content-oriented applications. </li>
-        	<li>Sling applications use either scripts or Java servlets, selected based on simple
-				name conventions, to process HTTP requests in a RESTful way.</li>
-        </ul>
-        <h4>Representational State Transfer (REST):</h4>
-
-        <ul>
-        	<li>REST stands for „REpresentational State Transfer</li>
-        	<li> It‘s an “architectural style for designing distributed systems“ defined in 2000 by Roy Fielding </li>
-        	<li>It‘s centered around the transfer of Representations of Resources</li>
-        	<li>A resource can essentially be anything (but has to be addressable)</li>
-        	<li>Resources are independent from their representation</li>
-        	<li>An URL identifies a resource</li>
-        	<li>Methods perform Operations on resources</li>
-        	<li>HTTP status codes are used to indicate result success</li>
-        </ul>
 
     </div>
     <div class="col-sm-2 sidenav">
