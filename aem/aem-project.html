@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AEM Tutorials</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript"  src="./assets/js/aem-main.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1250px}
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default header" id="head-nav">
+  <!-- loads header html-->
+</nav>
+  
+
+  <div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+  		<div class="list-group" id="left-nav">
+      <!-- load left-navigtion html -->
+      </div>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1><a name="technonlogy-stack">Create an Application/Project</a></h1>
+      <hr>
+		<p>This tutorial describe explain how create an application/project in AEM 6.0 using CRXDE Lite. This will provide an area for you to build AEM 6.0 elements (Templates, Components, etc.)</p>
+     <div class="jumbotron">
+          <h4>Adobe recommends that you create the following structure for your application/project:</h4>
+         
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Structure</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>/apps/&lt;application name&gt;</td>
+                  <td>/apps/&lt;application name&gt;/components</td>
+                  <td>/apps/&lt;application name&gt;/components/global</td>
+                  <td>/apps/&lt;application name&gt;/templates</td>
+                  <td>/apps/&lt;application name&gt;/src</td>
+                  <td>/apps/&lt;application name&gt;/install</td>
+                  
+                </tr>
+                <tr>
+                  <td>The application container</td>
+                  <td>The Components container</td>
+                  <td>The Page Components container</td>
+                  <td>The Templates container</td>
+                  <td>The OSGi bundles container</td>
+                  <td>The compiled OSGi bundles container</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+
+
+
+          <h4>Granite Platform ()</h4>
+          <ul>
+            <li>OSGi Framework (encapsulates all subsequent elements)</li>
+            <li>CQSE Servlet Engine (optional external application server(Jetty))</li>
+            <li>CRX Content Repository</li>
+            <li>Sling Content Delivery</li>
+            <li>Runs on JRE</li>
+          </ul>
+          <h4>Abobe Experience Manager Module</h4>
+          <ul>
+            <li>Individual AEM modules (WCM, DAM, Workflow, etc.)</li>
+            <li> Runs on Granite platform, within OSGi framework</li>
+          </ul>
+          <h4>Customer Applications (run on AEM)</h4>
+           <ul>
+            <li>Customer specific applications (websites, etc. also run within OSGi framework)</li>
+          </ul>
+    </div>
+		<h4>OSGi Framework:</h4> 
+		<p>The OSGi Framework is made up of three layers – Module, Lifecycle, and Services</p>
+		<p>The responsibilities of the layers are:</p>
+		<ul>
+			<li>
+				<p>
+					<strong>Module</strong> — Defines how a module, or a Bundle in OSGi-speak Basically, a bundle is just a plain old JAR file, 
+					whose manifest file has	some defined entries. These entries identify the bundle with a symbolic name, a version and more. In addition there are headers which define what a bundle provides – Export-Package – and what a bundle requires
+					to be operative – Import-Package and Require-Bundle.
+				</p>
+			</li>
+			<li>
+				<p><strong>Lifecycle</strong> — The lifecycle layer defines the states a bundle may be in and
+					describes the state changes. By providing a class, which implements the
+					BundleActivator interface and which is named in the Bundle-Activator
+					manifest header, a bundle may hook into the lifecycle process when the
+					bundle is started and stopped.
+				</p>
+			</li>
+			<li>
+				<p><strong>Services</strong> — For the application to be able to interact, the OSGi Core
+					Specification defines the service layer. This describes a registry for
+					services,which may be shared.
+				</p>
+			</li>
+
+		</ul>
+		
+
+		
+        
+		<h4>Jackrabbit Oak:</h4> 
+		<p>AEM 6.0 is now powered by the next generation repository implementation
+			called Jackrabbit.
+
+		</p>
+		<p>The architecture of Oak was redesigned from scratch to offer improved performance and scalability and support massive content repositories.
+		</p>
+
+		<h4>Java Content Repository (JCR):</h4>
+
+		<ul>
+			<li>A Java Content Repository is an object database that provides various services
+				for storing, accessing, and managing content.</li>
+			<li>In addition to a hierarchically structured storage, common services of a content repository
+				are versioning, access control, full text searching, and event monitoring.</li>
+			<li>The JCR provides a generic application data store for both structured and
+				unstructured content.
+			</li>
+			<li>File systems provide excellent storage for unstructured,hierarchical content.</li>
+            <li>
+            Databases provide excellent storage for structured data due to transactional services and referential integrity functionality.
+            </li>
+		</ul>
+		<h4>Jetty 8:</h4>
+		<p>An extensible, widely used open source web container supporting Servlets 3.0 specification, which has replaced the "own breed" CQSE used previously.</p>
+        <h4>Apache Solr:</h4>
+        <p>A scalable open source enterprise search platform, which can be configured as
+        	embedded server or integrated external instance, to replace and extend
+        	functionality of default search engine based on Lucene.
+        </p>
+        <h4>Apache Sling:</h4>
+        <ul>
+        	<li>Apache Sling is a web framework that uses a Java Content Repository, such as
+				Apache Jackrabbit or Adobe CRX to store and manage content.</li>
+        	<li> AEM is built using Sling, a Web application framework based on REST principles that provides easy development of content-oriented applications. </li>
+        	<li>Sling applications use either scripts or Java servlets, selected based on simple
+				name conventions, to process HTTP requests in a RESTful way.</li>
+        </ul>
+        <h4>Representational State Transfer (REST):</h4>
+
+        <ul>
+        	<li>REST stands for „REpresentational State Transfer</li>
+        	<li> It‘s an “architectural style for designing distributed systems“ defined in 2000 by Roy Fielding </li>
+        	<li>It‘s centered around the transfer of Representations of Resources</li>
+        	<li>A resource can essentially be anything (but has to be addressable)</li>
+        	<li>Resources are independent from their representation</li>
+        	<li>An URL identifies a resource</li>
+        	<li>Methods perform Operations on resources</li>
+        	<li>HTTP status codes are used to indicate result success</li>
+        </ul>
+
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p></p>
+      </div>
+      <div class="well">
+        <p></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center" id="footer-nav">
+  <!--load fooer html -->
+</footer>
+</body>
+</html>
+
