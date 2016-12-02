@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1606667132456720",
+      enable_page_level_ads: true
+    });
+  </script>
+
+  <title>AEM Tutorials|AEM Cheat Sheet</title>
+  <meta charset="utf-8">
+  <meta name="Description" content="AEM Cheat Sheet,AEM Shortcuts and Quick Reference Guide,Tips and Tricks from the CQ Community">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript"  src="./assets/js/aem-main.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 1350px}
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default header" id="head-nav">
+  <!-- loads header html-->
+</nav>
+  
+  <div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+		  <div class="list-group" id="left-nav">
+          <!-- load left-navigtion html -->
+      </div>
+    </div>
+    <div class="col-sm-8 text-left">
+      <h1><a name="technonlogy-stack">AEM Cheat Sheet</a></h1>
+      <hr>
+		  <p>This tutorial describe the aem shortcuts or aem tricks available that can used by AEM Developer or AEM Content Authors, If they make use of them in their day to day activities.</p>
+     <div class="jumbotron">
+          <h4>Debugging</h4>
+
+          <table class="table table-bordered">
+          <thead>
+            <tr class="active">
+              <th>AEM Debugging URL queries </th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>?debug=layout</strong></td>
+              <td>This will give you information about all the components you have on the page.</td>                   
+            </tr>
+            <tr>
+              <td><strong>?debug = mdev</strong></td>
+              <td>This will give mobile device info as inline HTML</td>
+            </tr>
+             <tr>
+              <td>?debug = mdevc</td>
+              <td>This will give mobile device info as HTML comment</td>                                    
+            </tr>
+             <tr>
+              <td>?debugClientLibs=true</td>
+              <td>This will Writes out all Clientlib categories as separate files (check your HTML-source)</td>                                    
+            </tr>
+             <tr>
+              <td>CTRL+SHIFT+U </td>
+              <td>Use this with ?debugClientLibs=true to show timing information across the page.  How long things take to load, etc.</td>                                   
+            </tr>
+             <tr>
+              <td>http://&lt;&lt;server&gt;&gt;/libs/cq/ui/content/dumplibs.html</td>
+               <td>This will give you all information around the clientlibs used in your CQ5-environment</td>              
+             </tr>
+             <tr>
+              <td>&lt;&lt;server&gt;&gt;:&lt;&lt;port&gt;&gt;/bin/crxde/logs?tail=2000</td>
+               <td>This will give logs directly via url (only works on author mode)</td>
+              
+            </tr>
+            <tr>
+              <td> ?wcmmode=(edit|preview|design|disabled)</td>
+               <td>This parameter sets your WcmMode in the specified mode.<br>- design (The WCM is in design mode.)<br>- disabled (The WCM is disabled.) <br> - edit (The WCM is in edit mode.)<br>-preview (The WCM is in preview mode.)
+               </td>
+              
+            </tr>
+          
+          </tbody>
+        </table>   
+          
+        <h4>Link Checker</h4>
+        <p>Link Checker is an out of the box component of Adobe CQ. It checks all the external link of content pages and make list them as valid or invalid. Invalid links show as a broken link icon on a content page.</p>
+        <p>You can check the External link checker queue from Tools console (or using the link http://localhost:4502/etc/linkchecker.html). </p>
+        <h6>Disable the link checker for specific links:</h6>
+        
+         <p> Use <strong>x-cq-linkchecker=“valid”</strong>  property in your <a> tag.<br>
+           -In this case Link Checker will check the link but always mark as valid.<br>
+            Use <strong>x-cq-linkchecker=“skip”,</strong> <br>- In this case Link checker will not check the link and mark as valid.
+         </p>   
+    </div>
+		
+    </div>
+     <div class="col-sm-2 sidenav" id="right-nav">
+      <!-- Add displayed-->
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center" id="footer-nav">
+  <!--load fooer html -->
+</footer>
+</body>
+</html>
