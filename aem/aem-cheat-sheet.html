@@ -41,7 +41,7 @@
       <hr>
 		  <p>This tutorial describe the aem shortcuts or aem tricks available that can used by AEM Developer or AEM Content Authors, If they make use of them in their day to day activities.</p>
       <h4>Debugging</h4>
-      <div class="jumbotron">
+      
           <table class="table table-bordered">
           <thead>
             <tr class="active">
@@ -88,14 +88,13 @@
           
           </tbody>
         </table>   
-    </div>
-    
+  
         <h4>Link Checker</h4>
         <p>Link Checker is an out of the box component of Adobe CQ. It checks all the external link of content pages and make list them as valid or invalid. Invalid links show as a broken link icon on a content page.</p>
         <p>You can check the External link checker queue from Tools console (or using the link http://localhost:4502/etc/linkchecker.html). </p>
         <h6>Disable the link checker for specific links:</h6>
         
-         <p> Use <strong>x-cq-linkchecker=“valid”</strong>  property in your <a> tag.<br>
+         <p> Use <strong>x-cq-linkchecker=“valid”</strong>  property in your &lt;a&gt; tag.<br>
            -In this case Link Checker will check the link but always mark as valid.<br>
             Use <strong>x-cq-linkchecker=“skip”,</strong> <br>- In this case Link checker will not check the link and mark as valid.
          </p>   
