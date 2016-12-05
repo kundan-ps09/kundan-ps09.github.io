@@ -127,28 +127,42 @@
          5. Type in the port from the "address" configuration of the jvm parameter defined above. In the example, it is port 8000 (and the host name of the machine you are connecting to, most likely localhost) <br>
          6. To start a debugging session, double-click your new configuration in the Debug Configurations screen after saving it.
         </p>
-        <h4>Vault</h4>
-        
-             <p><b>Checkout:</b><br>
-                vlt --credentials admin:admin co http://localhost:4502/crx/-/etc/designs ~/Desktop/
-             </p> 
-            <p>
-                <b>Export code from JCR:></b> <br>
-                vlt export -v http://localhost:4502/crx /content/forms forms
-            </p>
-            <p> <b>Import code to JCR:</b><br>
-                vlt -v import http://localhost:4502/crx . /
-            </p>
-            <p> <b>See modified files:</b><br>
-                vlt st
-            </p>
-            <p> <b>See  changes:</b> <br>
-                vlt diff text.jsp
-            </p>
-            <p> <b>Commit  changes:</b> <br>
-                vlt ci test.jsp
-            </p>
-        
+        <h4>Vault </h4>
+
+         <table class="table table-bordered">
+          <thead>
+            <tr class="active">
+              <th><center>Vault Commands</center></th>
+              <th><center>Description</center></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>vlt --credentials admin:admin co http://localhost:4502/crx/-/etc/designs ~/Desktop/</strong></td>
+              <td>To Checkout CRX Repository </td>                   
+            </tr>
+            <tr>
+              <td><strong> vlt export -v http://localhost:4502/crx /content/forms forms</strong></td>
+              <td>Export code from JCR</td>
+            </tr>
+             <tr>
+              <td><strong> vlt -v import http://localhost:4502/crx . /</strong></td>
+              <td>Import code to JCR</td>                                    
+            </tr>
+             <tr>
+              <td><strong> vlt st</strong></td>
+              <td>To See modified files</td>                                    
+            </tr>
+             <tr>
+              <td><strong>vlt diff text.jsp</strong> </td>
+              <td>To See  changes</td>                                   
+            </tr>
+             <tr>
+              <td><strong>vlt ci test.jsp</strong></td>
+               <td>Commit  changes</td>              
+             </tr>
+          </tbody>
+        </table>   
         <h4>filter.xml Modes</h4>
         <h5>There are three Mode available: </h5><br>
        <p>
