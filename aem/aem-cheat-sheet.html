@@ -113,15 +113,13 @@
         <p><strong>How do we debug our application running in a remote (or local) CQ5 server?</strong></p><br>
         <p>Add the Remote Debugging JVM Parameter</p>
         <p>You can add the parameter by doing the following; <br>
-
         1. Start your server like this: crx-quickstart/bin/start -d --debug-port 8000. 
            The -d parameter adds the jvm parameter to the CQ5 java process. <br>
         2. Add it to your crx-quickstart/bin/start script CQ_JVM_OPTS environment variable (so your server always starts in debug mode).<br>
         3.Include it as a parameter when starting CQ5 with java -jar directly. For example, java -Xmx512m -agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n -jar cq-author-4502.jar</p>
         <br>
         <p><strong>Start a remote debugging session</strong></p>
-        <p>To start a remote debugging session from Eclipse, do the following:
-
+        <p>To start a remote debugging session from Eclipse, do the following: <br>
          1. Open Eclipse. <br>
          2. Choose Run > Debug Configurations.<br>
          3. Right-click Remote Java Applications and select New. <br>
