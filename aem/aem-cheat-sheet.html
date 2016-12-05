@@ -127,8 +127,36 @@
          5. Type in the port from the "address" configuration of the jvm parameter defined above. In the example, it is port 8000 (and the host name of the machine you are connecting to, most likely localhost) <br>
          6. To start a debugging session, double-click your new configuration in the Debug Configurations screen after saving it.
         </p>
+        <h4>Vault</h4>
+        <div class="jumbotron">
+             <p>Checkout:<br>
+                vlt --credentials admin:admin co http://localhost:4502/crx/-/etc/designs ~/Desktop/
+             </p> 
+            <p>
+                Export code from JCR: <br>
+                vlt export -v http://localhost:4502/crx /content/forms forms
+            </p>
+            <p> Import code to JCR:<br>
+                vlt -v import http://localhost:4502/crx . /
+            </p>
+            <p> See modified files:<br>
+                vlt st
+            </p>
+            <p> See  changes: <br>
+                vlt diff text.jsp
+            </p>
+            <p> Commit  changes: <br>
+                vlt ci test.jsp
+            </p>
+        </div>
      </div>
-		
+		<h4>filter.xml Modes</h4>
+    <p>There are three Mode available: <br>
+
+        replace: Normal behavior. Existing content is replaced completly by the imported content, i.e. is overridden or deleted accordingly.<br>
+        merge: Existing content is not modified, i.e. only new content is added and none is deleted or modified<br>
+        update: Existing content is only updated but never deleted
+    </p>
    
     <div class="col-sm-2 sidenav" id="right-nav">
       <!-- Add displayed-->
